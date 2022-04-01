@@ -11,4 +11,4 @@ Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtc2ciOiJUaGlzIGlzIHRlc3QgdG9rZW4u
 
 ### Check flag ###
 GET http://localhost:8080/jwt/hs256/flag
-Flag: bsucWheD25rY$FAZzMxKJ7nwL8SNGiVkM!wmLNnVeKW5CjBdP3JH6XE8uiT7tyAG
+Flag: bsucWheD25rY-FAZzMxKJ7nwL8SNGiVkM!wmLNnVeKW5CjBdP3JH6XE8uiT7tyAG

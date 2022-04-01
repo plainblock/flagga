@@ -28,7 +28,7 @@ public class NoneTokenController extends TokenControllerBase {
 
 	@GetMapping(Mapping.TOKEN)
 	String token() {
-		return service.generateToken();
+		return service.generateToken() + RN;
 	}
 	
 	@GetMapping(Mapping.DECODE)
@@ -37,7 +37,7 @@ public class NoneTokenController extends TokenControllerBase {
 		if (token == null || token.isBlank()) {
 			return TOKEN_REQUIRED_ERROR; 
 		}
-		return service.decodeToken(token);
+		return service.decodeToken(token) + RN;
 	}
 	
 	@GetMapping(Mapping.VERIFY)
@@ -46,7 +46,7 @@ public class NoneTokenController extends TokenControllerBase {
 		if (token == null || token.isBlank()) {
 			return TOKEN_REQUIRED_ERROR; 
 		}
-		return service.verifyToken(token);
+		return service.verifyToken(token) + RN;
 	}
 	
 	@GetMapping(Mapping.FLAG)

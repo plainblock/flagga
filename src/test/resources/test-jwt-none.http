@@ -11,4 +11,4 @@ Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJtc2ciOiJUaGlzIGlzIHRlc3QgdG9rZW4uI
 
 ### Check flag ###
 GET http://localhost:8080/jwt/none/flag
-Flag: YUdRxH$NJP2Q6M5tmSeLGacpCTWiZs4DLmb8SjWHXG2ERi6fcv#t7eYQANsuDyKV
+Flag: YUdRxH_NJP2Q6M5tmSeLGacpCTWiZs4DLmb8SjWHXG2ERi6fcv#t7eYQANsuDyKV
