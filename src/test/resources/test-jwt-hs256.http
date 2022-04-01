@@ -1,0 +1,14 @@
+### Generate token ###
+GET http://localhost:8080/jwt/hs256/token
+
+### Decode token ###
+GET http://localhost:8080/jwt/hs256/decode
+Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtc2ciOiJUaGlzIGlzIHRlc3QgdG9rZW4uIiwic3ViIjoidXNlciIsImlzcyI6InBsYWluYmxvY2siLCJhZG0iOmZhbHNlLCJleHAiOjE2NDg2MzM3NDIsImlhdCI6MTY0ODYzMDE0Mn0.MGMU02dyK7NgWvp9q9X4z4dInwqMNPMPd_T9XSLBlBo
+
+### Verify token ###
+GET http://localhost:8080/jwt/hs256/verify
+Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtc2ciOiJUaGlzIGlzIHRlc3QgdG9rZW4uIiwic3ViIjoidXNlciIsImlzcyI6InBsYWluYmxvY2siLCJhZG0iOmZhbHNlLCJleHAiOjE2NDg2MzM3NDIsImlhdCI6MTY0ODYzMDE0Mn0.MGMU02dyK7NgWvp9q9X4z4dInwqMNPMPd_T9XSLBlBo
+
+### Check flag ###
+GET http://localhost:8080/jwt/hs256/flag
+Flag: bsucWheD25rY$FAZzMxKJ7nwL8SNGiVkM!wmLNnVeKW5CjBdP3JH6XE8uiT7tyAG

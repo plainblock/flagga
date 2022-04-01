@@ -1,0 +1,15 @@
+version: '3'
+services:
+  flagga:
+    image: flagga:latest
+    environment:
+      TZ: Asia/Tokyo
+      FLAGGA_LOG_LEVEL: INFO
+      FLAGGA_JWT_SECRET: 'secret'
+      FLAGGA_JWT_FLAG_NONE: 'YUdRxH_NJP2Q6M5tmSeLGacpCTWiZs4DLmb8SjWHXG2ERi6fcv#t7eYQANsuDyKV'
+      FLAGGA_JWT_FLAG_HS256: 'bsucWheD25rY-FAZzMxKJ7nwL8SNGiVkM!wmLNnVeKW5CjBdP3JH6XE8uiT7tyAG'
+    tty: true
+    container_name: flagga
+    restart: always
+    ports:
+      - "8888:8080"

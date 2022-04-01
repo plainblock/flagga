@@ -1,0 +1,14 @@
+### Generate token ###
+GET http://localhost:8080/jwt/none/token
+
+### Decode token ###
+GET http://localhost:8080/jwt/none/decode
+Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJtc2ciOiJUaGlzIGlzIHRlc3QgdG9rZW4uIiwic3ViIjoidXNlciIsImlzcyI6InBsYWluYmxvY2siLCJhZG0iOmZhbHNlLCJleHAiOjE2NDg2MzM1MzIsImlhdCI6MTY0ODYyOTkzMn0.
+
+### Verify token ###
+GET http://localhost:8080/jwt/none/verify
+Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJtc2ciOiJUaGlzIGlzIHRlc3QgdG9rZW4uIiwic3ViIjoidXNlciIsImlzcyI6InBsYWluYmxvY2siLCJhZG0iOmZhbHNlLCJleHAiOjE2NDg2MzM1MzIsImlhdCI6MTY0ODYyOTkzMn0.
+
+### Check flag ###
+GET http://localhost:8080/jwt/none/flag
+Flag: YUdRxH$NJP2Q6M5tmSeLGacpCTWiZs4DLmb8SjWHXG2ERi6fcv#t7eYQANsuDyKV

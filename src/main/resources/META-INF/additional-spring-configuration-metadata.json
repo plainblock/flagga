@@ -1,0 +1,19 @@
+{
+  "properties": [
+    {
+      "name": "jwt.secret",
+      "type": "java.lang.String",
+      "description": "Secret key to sign JWT."
+    },
+    {
+      "name": "jwt.flag.none",
+      "type": "java.lang.String",
+      "description": "Flag of none."
+    },
+    {
+      "name": "jwt.flag.hs256",
+      "type": "java.lang.String",
+      "description": "Flag of hs256."
+    }
+  ]
+}
