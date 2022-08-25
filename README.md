@@ -4,14 +4,7 @@ Problems collection of CTF (Capture The Flag)
 
 ## Environment
 
-- Local
-  - OpenJDK 17.0.2
-  - Spring Boot 2.6.6
-  - Gradle 7.4.1
-
-- Docker
-  - Docker Engine 20.10.14
-  - Docker Compose 1.29.2
+- OpenJDK 17.0.2 or higher
 
 ## How to solve
 
