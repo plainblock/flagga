@@ -10,7 +10,7 @@ Problems collection of CTF (Capture The Flag)
 
 Sending `GET` request to problem's endpoint, description is displayed.
 
-See the [Problem list](#problem-list) below for the endpoints for each problem
+See the [Problem list](#problem-list) below for the endpoints for each problem.
 
 ## Problem list
  - Falsify JWT (endpoint: `/jwt`)
