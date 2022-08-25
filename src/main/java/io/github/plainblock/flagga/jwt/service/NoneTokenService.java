@@ -13,14 +13,16 @@ import io.github.plainblock.flagga.jwt.domain.verifier.NoneTokenVerifier;
 @Service
 public class NoneTokenService extends TokenServiceBase implements TokenService {
 
-	@Autowired
-	private NoneTokenGenerator generator;
+	private final NoneTokenGenerator generator;
+	private final NoneTokenVerifier verifier;
+	private final String flag;
 
 	@Autowired
-	private NoneTokenVerifier verifier;
-
-	@Value(Config.FLAG_NONE)
-	private String flag;
+	public NoneTokenService(NoneTokenGenerator generator, NoneTokenVerifier verifier, @Value(Config.FLAG_NONE) String flag) {
+		this.generator = generator;
+		this.verifier = verifier;
+		this.flag = flag;
+	}
 
 	public String generateToken() {
 		return generator.generate(DEFAULT_SUBJECT, DEFAULT_MESSAGE);

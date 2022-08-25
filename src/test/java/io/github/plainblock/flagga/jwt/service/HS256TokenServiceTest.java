@@ -1,7 +1,5 @@
 package io.github.plainblock.flagga.jwt.service;
 
-import java.lang.reflect.Field;
-
 import io.github.plainblock.flagga.jwt.domain.constant.TestConstant;
 import io.github.plainblock.flagga.jwt.domain.constant.TokenConstant;
 import io.github.plainblock.flagga.jwt.domain.generator.HS256TokenGenerator;
@@ -46,18 +44,9 @@ public class HS256TokenServiceTest extends TokenServiceTestBase {
     }
 
     private static HS256TokenService getInstance() {
-    	HS256TokenService service = new HS256TokenService();
-		try {
-			Field generator = HS256TokenService.class.getDeclaredField("generator");
-			generator.setAccessible(true);
-			generator.set(service, new HS256TokenGenerator(TestConstant.SECRET));
-			Field verifier = HS256TokenService.class.getDeclaredField("verifier");
-			verifier.setAccessible(true);
-			verifier.set(service, new HS256TokenVerifier(TestConstant.SECRET));
-		} catch (IllegalAccessException | IllegalArgumentException | NoSuchFieldException e) {
-			e.printStackTrace();
-		}
-		return service;
+		HS256TokenGenerator generator = new HS256TokenGenerator(TestConstant.SECRET);
+		HS256TokenVerifier verifier = new HS256TokenVerifier(TestConstant.SECRET);
+		return new HS256TokenService(generator, verifier, TestConstant.FLAG);
     }
     
 }

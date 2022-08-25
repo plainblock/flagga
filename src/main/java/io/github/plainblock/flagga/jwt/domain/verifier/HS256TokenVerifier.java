@@ -1,6 +1,5 @@
 package io.github.plainblock.flagga.jwt.domain.verifier;
 
-import io.github.plainblock.flagga.jwt.domain.VerificationInfo;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -12,6 +11,7 @@ import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.DecodedJWT;
 
 import io.github.plainblock.flagga.jwt.domain.constant.TokenConstant;
+import io.github.plainblock.flagga.jwt.domain.VerificationInfo;
 
 @Component
 public class HS256TokenVerifier implements TokenVerifier {

@@ -1,8 +1,5 @@
 package io.github.plainblock.flagga.jwt.controller;
 
-import io.github.plainblock.flagga.jwt.Config;
-import io.github.plainblock.flagga.jwt.controller.constant.Header;
-import io.github.plainblock.flagga.jwt.controller.constant.Mapping;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.github.plainblock.flagga.jwt.Config;
+import io.github.plainblock.flagga.jwt.controller.constant.Header;
+import io.github.plainblock.flagga.jwt.controller.constant.Mapping;
 import io.github.plainblock.flagga.jwt.service.NoneTokenService;
 
 @RestController
@@ -19,12 +19,15 @@ import io.github.plainblock.flagga.jwt.service.NoneTokenService;
 public class NoneTokenController extends TokenControllerBase {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(NoneTokenController.class);
-	
-	@Autowired
-	private NoneTokenService service;
 
-	@Value(Config.FLAG_NONE)
-	private String flag;
+	private final NoneTokenService service;
+	private final String flag;
+
+	@Autowired
+	public NoneTokenController(NoneTokenService service, @Value(Config.FLAG_NONE) String flag) {
+		this.service = service;
+		this.flag = flag;
+	}
 
 	@GetMapping(Mapping.TOKEN)
 	String token() {

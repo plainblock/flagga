@@ -2,11 +2,10 @@ package io.github.plainblock.flagga.jwt.domain.generator;
 
 import java.util.Date;
 
-import org.springframework.stereotype.Component;
-
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
+import org.springframework.stereotype.Component;
 
 import io.github.plainblock.flagga.jwt.domain.constant.TokenConstant;
 

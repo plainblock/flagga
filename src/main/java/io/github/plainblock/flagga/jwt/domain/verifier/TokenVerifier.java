@@ -6,8 +6,8 @@ import io.github.plainblock.flagga.jwt.domain.VerificationInfo;
 
 public interface TokenVerifier {
 
-	DecodedJWT decode(String token);
+    DecodedJWT decode(String token);
 
-	VerificationInfo verify(String token);
-	
+    VerificationInfo verify(String token);
+
 }

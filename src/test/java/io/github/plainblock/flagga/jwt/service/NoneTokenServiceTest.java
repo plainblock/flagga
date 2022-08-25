@@ -1,7 +1,6 @@
 package io.github.plainblock.flagga.jwt.service;
 
-import java.lang.reflect.Field;
-
+import io.github.plainblock.flagga.jwt.domain.constant.TestConstant;
 import io.github.plainblock.flagga.jwt.domain.constant.TokenConstant;
 import io.github.plainblock.flagga.jwt.domain.generator.NoneTokenGenerator;
 import io.github.plainblock.flagga.jwt.domain.generator.TokenGenerator;
@@ -45,18 +44,9 @@ public class NoneTokenServiceTest extends TokenServiceTestBase {
     }
     
     private static NoneTokenService getInstance() {
-    	NoneTokenService service = new NoneTokenService();
-		try {
-			Field generator = NoneTokenService.class.getDeclaredField("generator");
-			generator.setAccessible(true);
-			generator.set(service, new NoneTokenGenerator());
-			Field verifier = NoneTokenService.class.getDeclaredField("verifier");
-			verifier.setAccessible(true);
-			verifier.set(service, new NoneTokenVerifier());
-		} catch (IllegalAccessException | IllegalArgumentException | NoSuchFieldException e) {
-			e.printStackTrace();
-		}
-		return service;
+		NoneTokenGenerator generator = new NoneTokenGenerator();
+		NoneTokenVerifier verifier = new NoneTokenVerifier();
+    	return new NoneTokenService(generator, verifier, TestConstant.FLAG);
     }
 
 }
