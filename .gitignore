@@ -1,45 +1,62 @@
-# Compiled class file
+### Java ###
 *.class
 *.jar
 *.war
 *.nar
 *.ear
 
-# Package Files #
-*.zip
-*.tar.gz
-*.rar
+### Gradle ###
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-# Eclipse
-.metadata
-.project
-.classpath
-.settings
-Servers
+### Maven ###
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
 
-# Idea
-.idea
-*.iml
+### IntelliJ IDEA ###
+.idea/
 *.iws
+*.iml
 *.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
 
-# OS
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.metadata/
+.project
+.settings
+.springBeans
+.sts4-cache
+Servers/
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Windows ###
 Thumbs.db
+
+### Mac OS ###
 .DS_Store
 
-# Gradle
-.gradle
-!gradle-wrapper.jar
-
-# Maven
-target
-
-# Build
-out
-build
-bin
-
-# Other
+### Other ###
 *.log
 *.swp
 *.bak
